@@ -7,57 +7,64 @@
     <title>Дипломная работа</title>
 </head>
 <body>
-    <header сlass="header">
-        
-        <div class="menu">
-          <div class="icon"><img src="icon.png"></div>
-            <nav>
-                <ul class="topmenu">
-                    <li><a href="index.html" class="active">Главная</a>
-                        <ul class="submenu">
-                            <li><a href="index.html#about_us">О нас</a></li>
-                            <li><a href="index.html#advantages">Достоинства</a></li>
-                            <li><a href="index.html#why_are_we">Почему мы?</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index_2.html" class="active">Программы обучения</a>
-                        <ul class="submenu">
-                            <li><a href="#openModal">Детский английский язык</a></li>
-                            <li><a href="#openModal_2">Для начинающих</a></li>
-                            <li><a href="#openModal_3">Уровень Intermediate</a></li>
-                            <li><a href="#openModal_4">Подготовка к экзаменам</a></li>
-                            <li><a href="#openModal_5">Бизнес-английский</a></li>
-                            <li><a href="#openModal_6">Курс разговорного английского</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index_3.html" class="active">Цены</a>
-                        <ul class="submenu">
-                            <li><a href="index_3.html#">Взрослым</a></li>
-                            <li><a href="index_3.html#">Детям</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index_4.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <button>Запишись на пробное занятие</button>
+  <header id="about_us" class="header" class="header-2">
+    <div class="main-menu">
+        <div class="icon"><img src="icon.png"></div>
+        <button class="header__burger-btn" id="burger">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="menu" id="menu">
+            <ul class="topmenu" class="menu__list">
+                <li class="menu__item"><a href="index.html" class="active" class="menu__link">Главная</a>
+                    <ul class="submenu">
+                        <li><a href="#about_us">О нас</a></li>
+                        <li><a href="#advantages">Достоинства</a></li>
+                        <li><a href="#why_are_we">Почему мы?</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="index_2.html" class="active" class="menu__link">Программы обучения</a>
+                    <ul class="submenu">
+                        <li><a href="index_2.html#openModal">Детский английский язык</a></li>
+                        <li><a href="index_2.html#openModal_2">Для начинающих</a></li>
+                        <li><a href="index_2.html#openModal_3">Уровень Intermediate</a></li>
+                        <li><a href="index_2.html#openModal_4">Подготовка к экзаменам</a></li>
+                        <li><a href="index_2.html#openModal_5">Бизнес-английский</a></li>
+                        <li><a href="index_2.html#openModal_6">Курс разговорного английского</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="index_3.html" class="active" class="menu__link">Цены</a>
+                    <ul class="submenu">
+                        <li><a href="index_3.html#">Взрослым</a></li>
+                        <li><a href="index_3.html#">Детям</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="index_4.html" class="menu__link">Контакты</a></li>
 
-            <div class="popup">
-                <div class="popup__container">
-                  <div class="popup__wrapper">
-                    <div id="blablabla">
-                        <form>
-                            <input type="text" name="name" placeholder="Имя">
-                            <input type="tel" name="phone" id="" placeholder="Номер телефона">
-                            <input type="email" name="email" id="" placeholder="Email">
-                            <input type="submit" value="Записаться">
-                        </form>
-                    </div>
-                  </div>
+            </ul>
+        </nav>
+        <div class="form-popup">
+        <button>Запишись на пробное занятие</button>
+
+        <div class="popup">
+            <div class="popup__container">
+              <div class="popup__wrapper">
+                <div id="blablabla">
+                    <form action="mail.php" method="post">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="tel" name="phone" id="" placeholder="Номер телефона">
+                        <input type="email" name="email" id="" placeholder="Email">
+                        <input type="submit" value="Записаться">
+                    </form>
                 </div>
               </div>
+            </div>
         </div>
-        <h1>Программы обучения</h1>
-    </header>
+        </div>
+    </div>
+
+<h1>Программы обучения</h1>
+
+</header>
 
     <section class="courses">
 
@@ -300,7 +307,7 @@
 <section class="forms" id="form">
     <h1>Запишитесь на пробное занятие</h1>
     <div class="form">
-    <form>
+    <form action="mail.php" method="post"> 
         <input type="text" name="name" placeholder="Имя">
         <input type="tel" name="phone" id="" placeholder="Номер телефона">
         <input type="email" name="email" id="" placeholder="Email">

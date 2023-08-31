@@ -9,27 +9,29 @@ button.addEventListener('click', () => {
 
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("burger").addEventListener("click", function() {
+      document.querySelector(".header").classList.toggle("open")
+  })
+})
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+// Закрыть меню при нажатии на Esc
+window.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+      // Действие при клике
+      document.querySelector(".header").classList.remove("open")
   }
-  slides[slideIndex-1].style.display = "block";
-}
+});
 
+// Закрыть меню при клике вне его
+document.getElementById("menu").addEventListener('click', event => {
+  event._isClickWithInMenu = true;
+});
+document.getElementById("burger").addEventListener('click', event => {
+  event._isClickWithInMenu = true;
+});
+document.body.addEventListener('click', event => {
+  if (event._isClickWithInMenu) return;
+  // Действие при клике
+  document.querySelector(".header").classList.remove("open")
+});

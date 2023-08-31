@@ -7,19 +7,22 @@
     <title>Дипломная работа</title>
 </head>
 <body>
-    <header class="header-3">
-        <div class="menu">
+    <header id="about_us" class="header" class="header-3">
+        <div class="main-menu">
             <div class="icon"><img src="icon.png"></div>
-            <nav>
-                <ul class="topmenu">
-                    <li><a href="index.html" class="active">Главная</a>
+            <button class="header__burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="menu" id="menu">
+                <ul class="topmenu" class="menu__list">
+                    <li class="menu__item"><a href="index.html" class="active" class="menu__link">Главная</a>
                         <ul class="submenu">
-                            <li><a href="index.html#about_us">О нас</a></li>
-                            <li><a href="index.html#advantages">Достоинства</a></li>
-                            <li><a href="index.html#why_are_we">Почему мы?</a></li>
+                            <li><a href="#about_us">О нас</a></li>
+                            <li><a href="#advantages">Достоинства</a></li>
+                            <li><a href="#why_are_we">Почему мы?</a></li>
                         </ul>
                     </li>
-                    <li><a href="index_2.html" class="active">Программы обучения</a>
+                    <li class="menu__item"><a href="index_2.html" class="active" class="menu__link">Программы обучения</a>
                         <ul class="submenu">
                             <li><a href="index_2.html#openModal">Детский английский язык</a></li>
                             <li><a href="index_2.html#openModal_2">Для начинающих</a></li>
@@ -29,22 +32,24 @@
                             <li><a href="index_2.html#openModal_6">Курс разговорного английского</a></li>
                         </ul>
                     </li>
-                    <li><a href="index_3.html" class="active">Цены</a>
+                    <li class="menu__item"><a href="index_3.html" class="active" class="menu__link">Цены</a>
                         <ul class="submenu">
-                            <li><a href="#">Взрослым</a></li>
-                            <li><a href="#">Детям</a></li>
+                            <li><a href="index_3.html#">Взрослым</a></li>
+                            <li><a href="index_3.html#">Детям</a></li>
                         </ul>
                     </li>
-                    <li><a href="index_4.html">Контакты</a></li>
+                    <li class="menu__item"><a href="index_4.html" class="menu__link">Контакты</a></li>
+  
                 </ul>
             </nav>
+            <div class="form-popup">
             <button>Запишись на пробное занятие</button>
 
             <div class="popup">
                 <div class="popup__container">
                   <div class="popup__wrapper">
                     <div id="blablabla">
-                        <form>
+                        <form action="mail.php" method="post">
                             <input type="text" name="name" placeholder="Имя">
                             <input type="tel" name="phone" id="" placeholder="Номер телефона">
                             <input type="email" name="email" id="" placeholder="Email">
@@ -53,9 +58,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
+            </div>
         </div>
-        <h1>Цены</h1>
+<h1>Цены</h1>
+
     </header>
 <section class="programms">
     <div class="adult">
@@ -70,7 +77,7 @@
                         <p>от 1 занятия</p>
                         <h1>от 330₽</h1>
                         <p>от 4 до 8 человек</p>
-                        <button>Записаться</button>
+                        <a href="#form"><button>Записаться</button></a>
                         
                     </div>
         
@@ -79,7 +86,7 @@
                         <p>от 1 занятия</p>
                         <h1>от 410₽</h1>
                         <p>от 4 до 8 человек</p>
-                        <button>Записаться</button>
+                        <a href="#form"><button>Записаться</button></a>
                     </div>
         
                     <div class="price">
@@ -87,7 +94,7 @@
                         <p>от 1 занятия</p>
                         <h1>от 840₽</h1>
                         <p>от 4 до 8 человек</p>
-                        <button>Записаться</button>
+                        <a href="#form"><button>Записаться</button></a>
                     </div>
                     </div>
             </div>
@@ -99,7 +106,7 @@
                         <p>от 1 занятия</p>
                         <h1>от 310₽</h1>
                         <p>от 4 до 8 человек</p>
-                        <button>Записаться</button>
+                        <a href="#form"><button>Записаться</button></a>
                     </div>
         
                     <div class="price">
@@ -107,7 +114,7 @@
                         <p>от 1 занятия</p>
                         <h1>от 410₽</h1>
                         <p>от 4 до 8 человек</p>
-                        <button>Записаться</button>
+                        <<a href="#form"><button>Записаться</button></a>
                     </div>
                 </div>
         
@@ -134,7 +141,7 @@
                 <p>от 1 занятия</p>
                 <h1>от 500₽</h1>
                 <p>от 4 до 8 человек</p>
-                <button>Записаться</button>
+                <a href="#form"><button>Записаться</button></a>
             </div>
 
             <div class="price">
@@ -142,7 +149,7 @@
                 <p>от 1 занятия</p>
                 <h1>от 300₽</h1>
                 <p>от 4 до 8 человек</p>
-                <button>Записаться</button>
+                <a href="#form"><button>Записаться</button></a>
             </div>
 
             <div class="price">
@@ -150,10 +157,26 @@
                 <p>от 1 занятия</p>
                 <h1>от 970₽</h1>
                 <p>от 4 до 8 человек</p>
-                <button>Записаться</button>
+                <a href="#form"><button>Записаться</button></a>
             </div>
         </div>
     </div>
+
+    <section class="forms" id="form">
+        <h1>Запишитесь на пробное занятие</h1>
+        <div class="form">
+        <form action="mail.php" method="post">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="tel" name="phone" id="" placeholder="Номер телефона">
+            <input type="email" name="email" id="" placeholder="Email">
+            <input type="submit" value="Записаться">
+            
+        </form>
+        <div class="img-icon">
+            <a href="https://www.flaticon.com/ru/free-stickers/" title="школа стикеры"><img src="images/free-sticker-creativity-4392479.png" height="300px" class="uk-img"></a>
+        </div>
+    </div>
+    </section>
 
 </section>
     <footer class="footer">
@@ -202,6 +225,7 @@
       
 
    <script src="script.js"></script>
+   <script src="script_2.js"></script>
 
 <link rel="preconnect" href="https
 ://fonts.googleapis.com">
